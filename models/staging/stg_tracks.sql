@@ -4,7 +4,7 @@ source as (
 ),
 renamed as (
     select
-        id,
+        id as track_id,
         name,
         popularity,
         duration_ms,
