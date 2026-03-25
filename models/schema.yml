@@ -2,9 +2,11 @@ version: 2
 
 sources:
   - name: spotify
-    schema: tracks
+    database: peerless-text-491310-n5
+    schema: spotify
+
     tables:
-      - name: raw_tracks
+      - name: tracks
         identifier: tracks
         description: Raw Spotify tracks data
 
@@ -74,3 +76,14 @@ sources:
 
           - name: time_signature
             description: Time signature
+
+
+models:
+  - name: stg_tracks
+    description: "Spotify track verisinin staging modeli"
+
+    columns:
+      - name: track_id
+        tests:
+          - not_null
+          - unique
