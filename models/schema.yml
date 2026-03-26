@@ -100,8 +100,16 @@ sources:
           - name: popularity
             description: Artist's popularity
 
+      - name: genres
+        identifier: artists
+
+        columns:          
+          - name: genres
+            description: Genres of artist
 models:
   - name: stg_tracks
     description: "Spotify track verisinin staging modeli"
   - name: stg_artist
     description: "Spotify artist verisinin staging modeli"
+  - name: stg_genres
+    description: "Muzik turleri"
