@@ -1,22 +1,8 @@
-with 
+with
 
-source as (
+    source as (select * from {{ source("spotify", "artist") }}),
 
-    select * from {{ source('spotify', 'artist') }}
+    renamed as (select id, followers, genres, name, popularity from source)
 
-),
-
-renamed as (
-
-    select
-        id,
-        followers,
-        genres,
-        name,
-        popularity
-
-    from source
-
-)
-
-select * from renamed
+select *
+from renamed
