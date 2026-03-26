@@ -1,0 +1,10 @@
+my_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: peerless-text-491310-n5   # doğru project
+      dataset: dbt_spotify               # default schema
+      threads: 4
+      keyfile: /path/to/keyfile.json
