@@ -100,15 +100,21 @@ sources:
           - name: popularity
             description: Artist's popularity
 
-      - name: genres
+      - name: artist_genres
         identifier: artists
 
-        columns:          
+        columns:
+          - name: artist_id
+            description: id
+
           - name: genres
             description: Genres of artist
 
           - name: followers
             description: Count of followers
+          
+          - name: popularity
+            description: Popularity of artist
       
       - name: genres_tracks
         identifier: genres_tracks
